@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="word" type="text" />
+    <button onclick="goster()">add</button>
+    <button onclick="silmek()">Sil</button>
+    <span id="ntc"></span>
+
+    <script>
+      const word = document.getElementById("word");
+      const ntc = document.getElementById("ntc");
+      let arr = [];
+
+      function goster() {
+        arr.push(word.value);
+        elave();
+      }
+      function silmek() {
+        arr.splice(-1, 1);
+        elave();
+      }
+      function elave() {
+        word.value = "";
+        ntc.innerHTML = arr.join(" ");
+      }
+    </script>
+  </body>
+</html>

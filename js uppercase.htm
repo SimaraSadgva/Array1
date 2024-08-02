@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="word" type="text" />
+    <button onclick="go()">Ok</button>
+    <span id="ntc"></span>
+    <script>
+      const word = document.getElementById("word");
+      const ntc = document.getElementById("ntc");
+
+      function go() {
+        words = word.value;
+        ntc.innerHTML = words.toUpperCase();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <!-- <style>
+      .active {
+        border: 1px solid #5f5656;
+        width: 150px;
+        padding: 10px;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- <pre><p class="active" id="a1"></p></pre>
+    <pre><p id="a2"></p></pre>
+
+    <script>
+      let text = "     Vahid     ";
+      let result = text.trim();
+
+      document.getElementById("a1").innerHTML = text;
+      document.getElementById("a2").innerHTML = result;
+    </script> -->
+
+    <input id="ad" type="text" />
+    <button onclick="cixis()">ok</button>
+    <p id="ntc"></p>
+
+    <script>
+      const ad = document.getElementById("ad");
+      const ntc = document.getElementById("ntc");
+
+      function cixis() {
+        let kod = "";
+        let word = ad.value;
+        for (let i = 0; i < word.length; i++) {
+          kod += word[i] ? word[i] : "";
+          //   kod += word ? word : ""; bosluq qeder tekrarlanacq
+        }
+        ntc.innerHTML = kod.toUpperCase();
+      }
+    </script>
+  </body>
+</html>

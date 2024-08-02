@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="ad" type="text" />
+    <button onclick="rengle()">ok</button>
+    <p id="ntc"></p>
+
+    <script>
+      const ad = document.getElementById("ad");
+      const ntc = document.getElementById("ntc");
+
+      function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function rengle() {
+        let kod = "";
+        let word = ad.value;
+        for (let i = 0; i < word.length; i++) {
+          let reng = `rgb(${rand(0, 255)},${rand(0, 255)},${rand(0, 255)})`;
+          kod += `<span style="color : ${reng}">${word[i]}</span>`;
+        }
+        ntc.innerHTML = kod.toUpperCase();
+
+      }
+    </script>
+  </body>
+</html>
